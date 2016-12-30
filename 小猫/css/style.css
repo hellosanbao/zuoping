@@ -1,0 +1,9 @@
+#wrap{width: 100%;max-width: 640px;background: #FC9158;overflow: hidden;margin: 0 auto;}
+.cat-img-box{width: 30%;background: #FEF7EC;border-radius: 7px;margin: 2.5% 0 0 2.5%;}
+.cat-img-box>img{margin-top: -0.5em;}
+.cat-style{text-align: center;font-size: 1em;font-weight: 700;color: #FE8832;margin-top: -1em;margin-bottom: 0.5em;line-height: 1.2em;height:1.2em;}
+.music-box{display: none;}
+.banner{width: 94%;margin: 1em auto 1em;}
+.swiper-container{border-radius: 10px;overflow: hidden;}
+.slide_link{width: 100%;}
+.logo{width: 35%;margin: 0 auto 2em;}

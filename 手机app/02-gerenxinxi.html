@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1" />
+		<title>我的</title>
+		<link rel="stylesheet" type="text/css" href="css/cover.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script src="js/jquery-1.10.min.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+
+	<body id="gray">
+		<div id="wrap">
+			<!-- 顶部 -->
+			<!-- 需要顶部固定，就加上fix这个class-->
+			<div class="top_box fix">
+				<div class="top_left fl clearfix">
+					<i class="jt_pre_ico dpi fl"></i>
+				</div>
+				<div class="top_center">我的订单</div>
+			</div>
+			<!-- 顶部 end-->
+
+			<!-- 用户上传图片 -->
+			<div class="pes_pic_cont">
+				<div class="pes_up_pic dpi"><input type="file" name="per_up" id="per_up" value="" /><label for="per_up" class="dp_block pes_up_btn"></label></div>
+				<div class="pes_pic dpi img-box"><img src="images/pro_pic.jpg" class="vm dp_block" /></div>
+				<div class="pes_pic dpi img-box"></div>
+				<div class="pes_pic dpi img-box"></div>
+				<div class="pes_pic dpi img-box"></div>
+				<div class="pes_pic dpi img-box"></div>
+				<div class="pes_pic dpi img-box"></div>
+				<div class="pes_pic dpi img-box"></div>
+			</div>
+			<!-- 用户上传图片end -->
+
+			<!-- 用户信息修改 -->
+			<!-- 基本信息第一栏 -->
+			<div class="person_mes_cont list_ty">
+				<!-- 用户头像 -->
+				<div class="person_mes_edit dp_block clearfix">
+					<span class="fl jf_tx">头像</span>
+					<div class="wd_ri dpi clearfix fr">
+						<i class="jt_ico_ty dp_block fr"></i>
+						<span class="person_pic fr dp_block img-box"><img src="images/pro_pic.jpg" class="vm dp_block"/></span>
+					</div>
+					<div class="alt_model">
+						<div class="alt_model_bg"></div>
+						<div class="alt_model_nr">
+							<p class="ed_tx_til tc">修改头像</p>
+							<div class="alt_btn_box clearfix">
+								<a href="#" class="dp_block fl txpz tc">拍照</a>
+								<a href="#" class="dp_block fl txbd gre tc"><input type="file" name="up_tx" id="up_tx" value="" /><label for="up_tx" class="tx_up dp_block">本地上传</label></a>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+                <!-- 用户头像 end-->
+                
+                <!-- 用户昵称 -->
+				<div  class="person_mes_edit dp_block clearfix">
+					<span class="fl jf_tx">昵称</span>
+					<div class="wd_ri dpi clearfix fr">
+						<i class="jt_ico_ty dpi fr"></i>
+						<span class="person_nc fr gry">德玛西亚</span>
+					</div>
+					<div class="alt_model">
+						<div class="alt_model_bg"></div>
+						<div class="alt_model_nr">
+							<p class="ed_til tc">昵称修改</p>
+							<div class="ed_nc_box">
+								<input maxlength="15" type="text" name="" id="" value="" placeholder="请输入..." class="ed_nc dp_block"/>
+							</div>
+							<div class="alt_btn_box clearfix">
+								<a href="#" class="dp_block fl sure gre tc">确认</a>
+								<a href="#" class="dp_block fl exit tc">取消</a>
+							</div>
+						</div>
+					</div>
+				</div>
+                <!-- 用户昵称 end-->
+                
+                <!-- 用户性别 -->
+				<div  class="person_mes_edit dp_block clearfix">
+					<span href="#" class="fl jf_tx">性别</span>
+					<div class=" dpi clearfix fr">
+						<i class="jt_ico_ty dpi fr"></i>
+						<span class="person_sex fr gry">
+							<input type="radio" name="sex" id="bm" value="" checked="checked"/><label for="bm" class="sex_btn"><i class="dpi ck_ico xz"></i>保密</label>
+							<input type="radio" name="sex" id="nan" value="" /><label for="nan" class="sex_btn"><i class="dpi ck_ico wxz"></i>男</label>
+							<input type="radio" name="sex" id="nv" value="" /><label for="nv" class="sex_btn"><i class="dpi ck_ico wxz"></i>女</label>
+						</span>
+					</div>
+				</div>
+                <!-- 用户性别 end-->
+                
+                <!-- 出生日期 -->
+				<div class="person_mes_edit dp_block clearfix">
+					<span class="fl jf_tx">出生日期  <span class="gry lm_js">不填属于：保密</span></span>
+					<div class=" dpi clearfix fr">
+						<i class="jt_ico_ty dpi fr"></i>
+						<span class="person_nc fr gry">1920-05-08</span>
+					</div>
+					<div class="alt_model">
+						<div class="alt_model_bg"></div>
+						<div class="alt_model_nr">
+							<p class="ed_til tc">修改出生日期</p>
+							<div class="ed_nc_box">
+								<div class="rq img-box-x"><img src="images/rq.jpg" alt="" class="vm dp_block"/></div>
+							</div>
+							
+							<div class="alt_btn_box clearfix">
+								<a href="#" class="dp_block fl sure gre tc">确认</a>
+								<a href="#" class="dp_block fl exit tc">取消</a>
+							</div>
+						</div>
+					</div>
+				</div>
+                <!-- 出生日期 end-->
+                
+                <!-- 家乡 -->
+				<div class="person_mes_edit dp_block clearfix">
+					<span href="#" class="fl jf_tx">家乡</span>
+					<div class="wd_ri dpi clearfix fr">
+						<i class="jt_ico_ty dpi fr"></i>
+						<span class="person_nc fr gry">金华</span>
+					</div>
+					<div class="alt_model">
+						<div class="alt_model_bg"></div>
+						<div class="alt_model_nr">
+							<p class="ed_til tc">家乡修改</p>
+							<div class="ed_nc_box">
+								<div class="rq img-box-x"><img src="images/jx.jpg" alt="" class="vm dp_block"/></div>
+							</div>
+							<div class="alt_btn_box clearfix">
+								<a href="#" class="dp_block fl sure gre tc">确认</a>
+								<a href="#" class="dp_block fl exit tc">取消</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 家乡end -->
+			</div>
+			<!-- 基本信息第一栏 end-->
+			
+			<!-- 基本信息第二栏 -->
+			<div class="person_mes_cont list_ty">
+				<div class="person_mes_edit dp_block clearfix">
+					<span href="#" class="fl jf_tx">注册手机号</span>
+					<div class="wd_ri dpi clearfix fr">
+						<span class="person_nc fr gry off_r">12345678910</span>
+					</div>
+				</div>
+				
+				<div class="person_mes_edit dp_block clearfix">
+					<span href="#" class="fl jf_tx">修改密码</span>
+					<div class="wd_ri dpi clearfix fr">
+						<i class="jt_ico_ty dpi fr"></i>
+					</div>
+				</div>
+			</div>
+			<!-- 基本信息第二栏 end-->
+			<!-- 用户信息修改  end-->
+            
+            <!-- 收货地址 -->
+			<a href="#" class="sh_ads_edit dp_block clearfix list_ty">
+				<span href="#" class="fl jf_tx">收货第地址</span>
+				<i class="jt_ico_ty dpi fr"></i>
+			</a>
+			<!-- 收货地址 end-->
+			
+			<a href="#" class="sh_ads_edit dp_block clearfix list_ty">
+				<span href="#" class="fl jf_tx">关联账号</span>
+				<span class="fr jf_tx gry off_r">QQ</span>
+			</a>
+			
+			<!-- <input type="submit" name="" id="" class="btn_ty sub_mes dp_block" value="确认修改"/> -->
+			<a href="#" class="btn_ty sub_mes dp_block tc">退出账户</a>
+		</div>
+	</body>
+
+</html>

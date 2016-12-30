@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html id="dy-html">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1" />
+		<title>我的</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/cover.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/secendStyle.css" />
+		<script src="js/jquery-1.10.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/index.js"></script>
+	</head>
+
+	<body id="gdy">
+		<div id="wrap">
+			<a href="#" class="gd-tg dp_block">跳过</a>
+			<div class="swiper-container gd-swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" style="background-image:url(./images/gd1.jpg);"></div>
+					<div class="swiper-slide" style="background-image:url(./images/gd1.jpg);"></div>
+					<div class="swiper-slide" style="background-image:url(./images/gd2.jpg);"><a href="#" class="gd_btn dp_block center"></a></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</body>
+	<script> 
+		var mySwiper = new Swiper('.swiper-container', {
+			direction: 'horizontal', //横竖屏，默认横屏(horizontal)
+			loop: false, //是否循环，默认false
+			speed: 300, //滑动速度，默认300
+			autoplay:3000, //是否自动播放，值为时间，不设置则不自动播放
+			autoplayDisableOnInteraction: false, //用户操作后自动播放停止，默认为true
+			mousewheelcontrol: true,
+			pagination: '.swiper-pagination', //启用分页器
+			onSlideChangeEnd: function(swiper){
+				if(mySwiper.activeIndex==2){
+					mySwiper.lockSwipes();     //播放到最后一张停锁定滑块
+				}
+            },
+			onTouchStart: function(swiper,even){
+               mySwiper.unlockSwipes();       //手指碰到屏幕解锁滑块   
+           },
+		})
+	</script>
+
+</html>

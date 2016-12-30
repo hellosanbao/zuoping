@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1" />
+		<title>小猫</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<div id="wrap">
+		<div class="bqd clearfix">
+			<div class="cat-img-box img-box-x fl"><img src="images/pingchang.png" alt="" />
+				<p class="cat-style">平常心</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/keai.png" alt="" />
+				<p class="cat-style">装可爱</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/xiaonu.png" alt="" />
+				<p class="cat-style">小怒一下</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/zhizi.png" alt="" />
+				<p class="cat-style">我才是主子</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/shihou.png" alt="" />
+				<p class="cat-style">狮吼乱入</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/shaonv.png" alt="" />
+				<p class="cat-style">少女猫</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/sajiao.png" alt="" />
+				<p class="cat-style">撒娇</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/gouda.png" alt="" />
+				<p class="cat-style">求勾搭</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/love.png" alt="" />
+				<p class="cat-style">love</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/mini.png" alt="" />
+				<p class="cat-style">迷你猫</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/biaoqin.png" alt="" />
+				<p class="cat-style">睡觉觉</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/fadia.png" alt="" />
+				<p class="cat-style">发嗲</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/haoqi.png" alt="" />
+				<p class="cat-style">好奇猫</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/fuxiang.png" alt="" />
+				<p class="cat-style">浮想联翩</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/duzi.png" alt="" />
+				<p class="cat-style">肚子叫</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/hulu.png" alt="" />
+				<p class="cat-style">打呼噜</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/aowu.png" alt="" />
+				<p class="cat-style">嗷呜</p>
+			</div>
+			<div class="cat-img-box img-box-x fl"><img src="images/comming.png" alt="" />
+				<p class="cat-style">我来了</p>
+			</div>
+		</div>
+		<div class="music-box">
+			<audio src="musics/pingchang.mp3" controls="controls"></audio>
+			<audio src="musics/keai.mp3" controls="controls"></audio>
+			<audio src="musics/xiaonu.mp3" controls="controls"></audio>
+			<audio src="musics/zhizi.mp3" controls="controls"></audio>
+			<audio src="musics/shihou.mp3" controls="controls"></audio>
+			<audio src="musics/shaonv.mp3" controls="controls"></audio>
+			<audio src="musics/sajiao.mp3" controls="controls"></audio>
+			<audio src="musics/gouda.mp3" controls="controls"></audio>
+			<audio src="musics/love.mp3" controls="controls"></audio>
+			<audio src="musics/mini.mp3" controls="controls"></audio>
+			<audio src="musics/biaoqing.mp3" controls="controls"></audio>
+			<audio src="musics/fadia.mp3" controls="controls"></audio>
+			<audio src="musics/haoqi.mp3" controls="controls"></audio>
+			<audio src="musics/fuxiang.mp3" controls="controls"></audio>
+			<audio src="musics/duzi.mp3" controls="controls"></audio>
+			<audio src="musics/hulu.mp3" controls="controls"></audio>
+			<audio src="musics/aowu.mp3" controls="controls"></audio>
+			<audio src="musics/comming.mp3" controls="controls"></audio>
+		</div>
+		<div class="banner">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#" class="slide_link img-box-x dp_block"><img src="images/banner1.png" alt="" class="slide_img vm"></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#" class="slide_link img-box-x dp_block"><img src="images/banner2.jpg" alt="" class="slide_img vm"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bot">
+			<a href="" class="logo dp_block img-box-x"><img src="images/logo.png" alt="" class="vm"/></a>
+		</div>
+	</div>
+
+	<body>
+	</body>
+	<script src="js/1.7.jquery.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script type="text/javascript">
+		/*字体自适应*/
+		var wrapWidth = document.getElementById("wrap").clientWidth;
+		var body = document.getElementsByTagName("body")[0];
+		body.style.fontSize = 14 * wrapWidth / 320 + "px";
+		window.onresize = function() {
+			wrapWidth = document.getElementById("wrap").clientWidth;
+			body.style.fontSize = 14 * wrapWidth / 320 + "px";
+		};
+
+		/*音乐控制*/
+		$(function() {
+				var index;
+				for(var j = 0; j < $(".music-box audio").length; j++){
+					$(".music-box audio")[j].preload="auto";
+				}
+				$(".cat-img-box").click(function() {
+					index = $(this).index()
+					$(this).css("background", "#FCD3A4").siblings().css("background", "#FEF7EC");
+					$(".music-box audio").eq(index).get(0).currentTime = 0;
+					$(".music-box audio").get(index).play();
+					for (var i = 0; i < $(".music-box audio").length; i++) {
+						if (i != index) {
+							$(".music-box audio")[i].pause();
+						}
+					}
+				})
+			})
+			/*SWIPER*/
+			var mySwiper = new Swiper ('.swiper-container', {
+                   direction: 'horizontal',    //横竖屏，默认横屏(horizontal)
+                        loop: true,         //是否循环，默认false
+                       speed: 300,           //滑动速度，默认300
+                    autoplay:4500,           //是否自动播放，值为时间，不设置则不自动播放
+autoplayDisableOnInteraction:false,           //用户操作后自动播放停止，默认为true
+           mousewheelcontrol:true,
+                 pagination : '.swiper-pagination',  //启用分页器
+                  prevButton:'.swiper-button-prev',   //启用后退按钮
+                  nextButton:'.swiper-button-next'  //启用前进按钮
+               })
+	</script>
+
+</html>

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <title>数据报表</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+    <meta name="imagemode" content="force">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-1.10.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/echarts2.js"></script>
+</head>
+
+<body>
+    <div id="warp">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- page1 -->
+                <div class="swiper-slide page-1">
+                    <h3 class="page-title tx_c goback"><a onclick='history.go(-1)'></a></h3>
+                    <div class="m-head tx_c">
+                        <h3 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s">团队战斗力指数</h3>
+                        <p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s">TEAM EFFECYIVENESS INDEX</p>
+                    </div>
+                    <div class="rep-time tx_c ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="0.2s">
+                        <span>整体诊断报告</span> <i></i>2016-9-30
+                    </div>
+                    <div class="hand-img img-box-x ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="1.5s" swiper-animate-delay="0.1s">
+                        <img src="images/hand.png" alt="" class="vm" />
+                    </div>
+                    <div class="jt-icon"><img src="images/jt.png" alt="" /></div>
+                </div>
+                <!-- page2 -->
+                <div class="swiper-slide page-2">
+                    <h3 class="page-title tx_c">
+                        <p class="ani" swiper-animate-effect="slideInDown" swiper-animate-duration="0.5s">团队战斗力指数—— 氛围温度</p>
+                    </h3>
+                    <div class="p-cont">
+                        <div class="tags-box ani" swiper-animate-effect="flipInX" swiper-animate-duration="1s">
+                            <p class="ani pr" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s">团队士气趋于平庸，战斗力在不知不觉中流失 。需要找出问题，扫除障碍, 进一步挖掘团队的潜力</p>
+                        </div>
+                        <p class="zs-js ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s"><a href="#">指数的由来</a></p>
+                        <!-- 指针表盘--通过data-value属性改变温度值 -->
+                        <div class="charHC ani" id="chartY" data-value="42" swiper-animate-effect="bounceIn" swiper-animate-duration="2s"></div>
+                        <!-- 指针表盘--通过data-value属性改变温度值 end-->
+                        <div class="bot-text tx_c">
+                            <p class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s"> > 团队平均温度为63度，处于“尚有潜力”的状态</p>
+                            <p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s"> > 本次参评的领导者共10人，直接下属66人</p>
+                        </div>
+                    </div>
+                    <div class="jt-icon"><img src="images/jt.png" alt="" /></div>
+                </div>
+                <!-- page3 -->
+                <div class="swiper-slide page-3">
+                    <h3 class="page-title tx_c">
+                        <p class="ani" swiper-animate-effect="slideInDown" swiper-animate-duration="0.5s">团队战斗力指数—— 排头尖兵</p>
+                    </h3>
+                    <div class="p-cont">
+                        <div class="charts-cont">
+                            <ul class="echarts-bar clearfix">
+                                <li class="bar1 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s">
+                                    <p>危机四伏</p><span>40</span></li>
+                                <li class="bar2 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.1s">
+                                    <p>急需改进</p><span>60</span></li>
+                                <li class="bar3 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.2s">
+                                    <p>尚有潜力</p><span>80</span></li>
+                                <li class="bar4 ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                                    <p>红红火火</p><span>100</span></li>
+                            </ul>
+                            <p class="til ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.1s">前三名</p>
+                            <!-- data-echart-name 条形图左边名称；data-echart-num条形图长度，满值100 -->
+                            <div id="chart1" data-echart-name="['周建文','李凯','王晓茂']" data-echart-num="[40, 70, 66]" class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s" swiper-animate-delay="0.2s"></div>
+                            <p class="til ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0.3s">后三名</p>
+                            <div id="chart2" data-echart-name="['大宝','二宝','三宝']" data-echart-num="[40, 70, 66]" class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.4s"></div>
+                        </div>
+                        <p class="zs-js ani pt0" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.4s"><a href="#">查看全部</a></p>
+                    </div>
+                    <div class="jt-icon"><img src="images/jt.png" alt="" /></div>
+                </div>
+                <!-- page4 -->
+                <div class="swiper-slide page-4">
+                    <h3 class="page-title tx_c">
+                        <p class="ani" swiper-animate-effect="slideInDown" swiper-animate-duration="0.5s">团队战斗力指数—— 氛围温度</p>
+                    </h3>
+                    <div class="p-cont">
+                        <div class="tags-box ani" swiper-animate-effect="flipInY" swiper-animate-duration="1s">
+                            <div class="ani pr" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s">
+                                <span style="color: #ff0000;">参评的10位领导者中：</span>
+                                <p style='margin-top:0.5rem;'>* 0%的团队处于“危机四伏”状态，这些团队士气低落，面临分崩离析的危险</p>
+                                <p style='margin-top:0.5rem;'>* 20%的团队处于“急需改进”状态，这些团队的氛围严重阻碍了战斗力的有效发挥</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="charts-cont pr charts-cont3">
+                        <div id="chart3" class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s"></div>
+                        <script>
+                        //饼图数据，name为百分比，value为值，满值100；
+                        var datashow = [{
+                            value: 12,
+                            name: '12%'
+                        }, {
+                            value: 12,
+                            name: '12 %'
+                        }, {
+                            value: 6,
+                            name: '6%'
+                        }, {
+                            value: 70,
+                            name: '70%'
+                        }]
+                        </script>
+                        <ul class="label ani">
+                            <li class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.1s">邮件营销<i style="background:#c3d79b "></i></li>
+                            <li class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.2s">联盟广告<i style="background:#b3a1c7 "></i></li>
+                            <li class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.3s">视频广告<i style="background:#93cddd "></i></li>
+                            <li class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s" swiper-animate-delay="0.4s">搜索引擎<i style="background:#f79546 "></i></li>
+                        </ul>
+                    </div>
+                    <div class="jt-icon"><img src="images/jt.png" alt="" /></div>
+                </div>
+                <!-- page5 -->
+                <div class="swiper-slide page-5">
+                    <h3 class="page-title tx_c">
+                        <p class="ani" swiper-animate-effect="slideInDown" swiper-animate-duration="0.5s">执行 - 创新 - 凝聚</p>
+                    </h3>
+                    <div class="p-cont">
+                        <div class="tags-box ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="1s">
+                            <p class="ani pr" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s">
+                                <span style="color: #ff0000;">凝聚温度相对最低，处于“急需改进”状态，可能导致：</span>
+                                <br/>* 优秀人才流失
+                                <br/>* 团队成员各自为战，不愿协同
+                                <br/>* 团队成员心怀不满，消极怠工
+                            </p>
+                        </div>
+                    </div>
+                    <div class="charts-cont pr charts-cont4">
+                        <!--data-echart-num 为折线图的参数-->
+                        <div id="chart4" class="ani" data-echart-num="[77, 80,68,]" swiper-animate-effect="bounceIn" swiper-animate-duration="1.2s" swiper-animate-delay="0.1s"></div>
+                        <ul class="label clearfix">
+                            <li class="ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.2s" swiper-animate-delay="0.1s">
+                                执行温度
+                                <p style="color: #c3d79b">尚有潜力</p>
+                            </li>
+                            <li class="ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.2s" swiper-animate-delay="0.2s">
+                                创新温度
+                                <p style="color: #b3a1c7">尚有潜力</p>
+                            </li>
+                            <li class="ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1.2s" swiper-animate-delay="0.3s">
+                                急需修改
+                                <P style="color: #93cddd">急需改进</P>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="jt-icon"><img src="images/jt.png" alt="" /></div>
+                </div>
+                <!-- page6 -->
+                <div class="swiper-slide page-6">
+                    <h3 class="page-title tx_c">
+                        <p class="ani" swiper-animate-effect="slideInDown" swiper-animate-duration="0.5">执行 - 创新 - 凝聚</p>
+                    </h3>
+                    <div class="p-cont">
+                        <div class="tags-box ani" swiper-animate-effect="swing" swiper-animate-duration="1s">
+                            <p class="ani pr" swiper-animate-effect="zoomIn" swiper-animate-duration="1s">
+                                <span style="color: #ff0000;">凝聚温度相对最低，处于“急需改进”状态，可能导致：</span>
+                                <br/>* 优秀人才流失
+                                <br/>* 团队成员各自为战，不愿协同
+                                <br/>* 团队成员心怀不满，消极怠工
+                            </p>
+                        </div>
+                    </div>
+                    <div class="charts-cont pr charts-cont5">
+                        <!--data-echart-num 为折线图的参数-->
+                        <div id="chart5" class="ani" data-echart-num="[40, 60,96,96,5]" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="0.1s"></div>
+                        <ul class="label clearfix">
+                            <li class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.2s" swiper-animate-delay="0.1s">执行温度</li>
+                            <li class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.2s" swiper-animate-delay="0.2s">创新温度</li>
+                            <li class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.2s" swiper-animate-delay="0.3s">急需修改</li>
+                            <li class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.2s" swiper-animate-delay="0.3s">急需修改</li>
+                            <li class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.2s" swiper-animate-delay="0.3s">急需修改</li>
+                        </ul>
+                    </div>
+                    <div class="jt-icon"><img src="images/jt.png" alt="" /></div>
+                </div>
+                <!-- page7 -->
+                <div class="swiper-slide page-7">
+                    <h3 class="page-title tx_c">
+                        <p class="ani" swiper-animate-effect="slideInDown" swiper-animate-duration="0.5">行动建议</p>
+                    </h3>
+                    <div class="p-cont">
+                        <p class="img-box-x xd-pic ani" swiper-animate-effect="bounceIn" swiper-animate-duration="1.5s"><img src="images/xdban.jpg" alt="" class="vm" /></p>
+                        <ul class="act-list">
+                            <li class="ani" swiper-animate-effect="tada" swiper-animate-duration="1.5s">
+                                ACT I：在内部发起改进会议，剖析问题的原因，提出具体的解决方案
+                            </li>
+                            <li class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s">
+                                ACT I：在内部发起改进会议，剖析问题的原因，提出具体的解决方案
+                            </li>
+                            <li class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="1.5s">
+                                ACT I：在内部发起改进会议，剖析问题的原因，提出具体的解决方案
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="jt-icon"><img src="images/jt.png" alt="" /></div>
+                </div>
+                <!-- page8 -->
+                <div class="swiper-slide page-8">
+                    <h3 class="page-title tx_c">
+                        <p>分享报告</p>
+                    </h3>
+                    <div class="p-cont pr">
+                        <p class="img-box-x xd-pic"><img src="images/lastban.jpg" alt="" class="vm" /></p>
+                        <p class="lt-info">可以通过微信将这份诊断报告分享给你认为适合阅读它的人</p>
+                    </div>
+                    <div class="goTop"></div>
+                    <p class="share-btn pa">分享链接</p>
+                    <div class="warpBg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    //字体自适应
+    $(function() {
+        var wrapWidth = document.getElementById("warp").clientWidth;
+        var html = document.getElementsByTagName("html")[0];
+        html.style.fontSize = 14 * wrapWidth / 320 + "px";
+        window.onresize = function() {
+            wrapWidth = document.getElementById("warp").clientWidth;
+            html.style.fontSize = 14 * wrapWidth / 320 + "px";
+        };
+    })
+
+    $(".ani").css("opacity", 0);
+    window.onload = function() {
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical', //横竖屏，默认横屏(horizontal)
+            speed: 400, //滑动速度，默认300
+            autoplayDisableOnInteraction: false,
+            onInit: function(swiper) {
+                $(".ani").css("opacity", 1);
+                swiperAnimateCache(swiper);
+                swiperAnimate(swiper);
+            },
+            onSlideChangeEnd: function(swiper) {
+                swiperAnimate(swiper);
+            }
+        })
+        $('.goTop').click(function() {
+            mySwiper.slideTo(0, 2000, true); //切换到第一个slide，速度为1秒
+        })
+
+        $(".share-btn").click(function() {
+            $(".warpBg").show();
+            mySwiper.lockSwipeToPrev();
+            mySwiper.lockSwipeToNext();
+        })
+        $(".warpBg").click(function() {
+            $(".warpBg").hide();
+            mySwiper.unlockSwipeToPrev();
+            mySwiper.unlockSwipeToNext();
+        })
+    }
+    </script>
+    <script src="js/echartsConfig.js"></script>
+</body>
+
+</html>
