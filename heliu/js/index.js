@@ -1,6 +1,6 @@
 $(function(){
 	var bodyHeight=window.innerHeight;
-	 $(".meun-btn")[0].addEventListener('touchstart',function(){
+	 $(".meun-btn").click(function(){
 	 	if($(".top-menu-mob").hasClass("top-menu-mob-show")){
 	 		$(".top-menu-mob").removeClass("top-menu-mob-show")
 	 		$(this).removeClass("exit-btn")
