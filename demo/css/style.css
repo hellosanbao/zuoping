@@ -53,3 +53,4 @@
 }
 .warp{width: 90%;margin: 30px auto;border-radius:7px;overflow: hidden;border:1px solid #eee;}
 .head{height:45px;line-height: 45px;padding:10px 0;background: #3e434a;font-size: 20px;color: #fff;text-align: center;}
+.grid-load{background: url(../images/load.gif) no-repeat center #127cc7;}

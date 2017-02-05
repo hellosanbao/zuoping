@@ -5,6 +5,7 @@
 <meta name='viewport' content="width=device-width,initial-scale=1.0,user-scalable=no">
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="js/jquery-1.10.min.js"></script>
     <script src="js/minigrid.js"></script>
     <!-- <script src="js/dynamics.js"></script> -->
     <link rel="stylesheet" href="css/style.css">
@@ -13,7 +14,7 @@
 <body>
     <div class="warp">
     <div class="head">案例列表（部分已上线，作品挂在github上，可能加载有点慢）</div>
-        <div class="grid">
+        <div class="grid grid-load">
             <div class="grid-item">
                 <div class="grid-warp">
                     <a href="http://bjgdauto.com.cn/" target="_blank">
@@ -129,7 +130,7 @@
 </body>
 <script>
 window.onload = function() {
-    alert(1)
+    $(".grid").removeClass(".grid-load");
     minigrid('.grid', '.grid-item', 25);
     window.addEventListener('resize', function() {
         minigrid('.grid', '.grid-item', 25);
